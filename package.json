@@ -1,0 +1,46 @@
+{
+  "name": "make-it-a-bit-better",
+  "version": "0.2.2",
+  "description": "An autonomous product-polish loop: every round opens a mandatory fresh brainstorm (3 perspective subagents), picks one small angle, implements, verifies and commits it, and logs it in a per-project ledger; oversized ideas go to an icebox. A bit better, round after round.",
+  "type": "module",
+  "main": "index.js",
+  "exports": {
+    ".": "./index.js",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "index.js",
+    "cordis.patch.yml",
+    "skills/",
+    "assets/",
+    "README.md",
+    "README_CN.md",
+    "LICENSE",
+    "CHANGELOG.md"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "engines": {
+    "dsh": ">=0.2.1-rc.2 <0.3.0"
+  },
+  "peerDependencies": {
+    "@deepseek-ai/dsh-skill-filesystem": ">=0.1.0-rc.6 <0.3.0"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Lumos-789/make-it-a-bit-better"
+  },
+  "keywords": [
+    "dsh-plugin",
+    "polish",
+    "iteration",
+    "continuous-improvement",
+    "product",
+    "brainstorm"
+  ]
+}
